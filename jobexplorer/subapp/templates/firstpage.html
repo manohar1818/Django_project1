@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="import" href="https://fonts.googleapis.com/css?">
+
+	<style>
+		.subcon{
+
+			width:350px;
+			margin-left: 5%;
+			height: 400px;
+			border-radius: 5px;
+			background:white;
+			box-shadow: 0px 0px 5px;
+		}
+		.maincon{
+			margin-top: 100px;
+			margin-left:2%;
+		}
+		.subcon img{
+			width:350px;
+			border-radius: 5px;
+		}
+		body{
+			background:white;
+		}
+		.nav1{
+			display:flex;
+			background:transparent;
+			height: 80px;
+		}
+		.a1 a{
+			text-decoration: none;
+			color:grey;
+			margin-left: 10px;
+		}
+		.a1{
+			padding-top: 15px;
+			height:50px;
+			margin-left: 20px;
+			width: 276px;
+			margin-top: 15px;
+		}
+		.navtitle{
+			font-size: 28px;
+			text-align: center;
+			margin-top: 5px;
+
+			height:50px;
+			padding-left: 12px;
+			width: 400px;
+		}
+		.log{
+			margin-left: 200px;
+    padding-top: 40px;
+    height: 50px;
+    margin-top: 20px;
+		color:black;
+
+		}
+		.log a{
+			text-decoration: none;
+			color:black;
+			margin-left: 40px;
+
+
+		}
+		.fixbut{
+			position: fixed;
+			bottom: 15px;
+			right:20px;
+			background:#17a2b8;
+			color: white;
+			border-radius: 8px;
+			outline: none;
+			border:none;
+		}
+		.supre{
+			text-overflow: ellipsis;
+			overflow: hidden;
+			line-height: 16px;
+		}
+		#img1{
+			width: 45%;
+    height:450px;
+    float: right;
+    /* right: 9%; */
+    margin-right: 80px;
+		margin-top:30px
+		}
+		#img2{
+			width: 300px;
+    height: 200px;
+			margin-left: 0px;
+			margin-right: 990px;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<!--<button class="fixbut" style="text-overflow:inherit;">THIS IS FIXED</button>-->
+	<div class="nav1">
+		<div class="navtitle"><img id="img2" src="{% static 'images/logo1.png' %}"><!--<span style="font-weight:600; color:#14d5e2">VIDHYACONNECT</span>--></div>
+		<!--<div class="a1">
+			<a href="#">HOME</a>
+			<a href="#">SUPPORT</a>
+			<a href="#">DETAILS</a>
+
+		</div>-->
+		<div class="log">
+		<a href="#">Home</a>
+		<a href="#">About Us</a>
+		<a href="#">Subscribe</a>
+		<a href="#">Contact Us</a>
+
+		<!--
+		<a href="#">DETAILS</a><a href="#">LOGIN</a>
+	--></div>
+	</div>
+	<div class="jumbotro"style="position: relative;margin-top: 60px;"><img id="img1" src="{% static 'images/image1.jpg' %}">
+
+		<span style="/*position:absolute;left:5%;width:550px;top:30%;font-size: 28px;font-weight: 3px;color: black;
+		*/position: absolute;left: 5%;width: 467px;top: 30%;font-size: 28px;margin-top: 136px;
+		color: #d11814;text-align: left;font-family:'Roboto',sans-serif;
+		font-weight:600;">EXPLORE OPPORTUNITIES </span>
+
+		<span style="/*position:absolute;left:5%;width:550px;top:30%;font-size: 28px;font-weight: 3px;color: black;
+		*/position: absolute;left: 5%;width: 567px;top: 30%;font-size: 20px;font-weight: 3px;margin-top: 188px;
+		color: black;text-align: left;font-family: 'Roboto',sans-serif;
+		font-weight:500;">Your opportunity is your future, you just don’t know it yet.<br>Make informed decisions about your future.<br> Let's discover plethora of opportunities.
+</span>
+
+		<button onclick="location.href='http://localhost:8000/cards'" class="btn" style="/*position:absolute;top:35%;left:41%*/position: absolute;top: 35%;margin-top: 351px;left: 8%;background:#ffa100;border-radius:25px;width:233px;color:white;height:50px;font-weight:800;">GET STARTED</button>
+	</div>
+
+</body>
+</html>

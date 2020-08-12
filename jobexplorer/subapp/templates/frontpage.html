@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		.subcon{
+
+			width:350px;
+			margin-left: 5%;
+			height: 400px;
+			border-radius: 5px;
+			background:white;
+			box-shadow: 0px 0px 5px;
+			margin-top: 5%;
+		}
+		.maincon{
+			margin-top: 35px;
+			margin-left:2%;
+		}
+		.subcon img{
+			width:350px;
+			border-radius: 5px;
+			height: 220px;
+		}
+		body{
+			background:white;
+			overflow-x: hidden;
+		}
+
+
+		.a1 a{
+			text-decoration: none;
+			color:grey;
+			margin-left: 10px;
+		}
+		.a1{
+			padding-top: 15px;
+			height:50px;
+			margin-left: 20px;
+		}
+		.navtitle{
+			font-size: 28px;
+			font-weight: 2px;
+			text-align: center;
+			margin-top: 5px;
+			height:180px;
+			width: 100px;
+			padding-left: 10px;
+		}
+		.log{
+			margin-left: 750px;
+			padding-top: 15px;
+			height:50px;
+
+		}
+		.log a{
+			text-decoration: none;
+			color:grey;
+
+		}
+		.fixbut{
+			position: fixed;
+			bottom: 15px;
+			right:20px;
+			background:#17a2b8;
+			color: white;
+			border-radius: 8px;
+			outline: none;
+			border:none;
+		}
+		.supre{
+			text-overflow: ellipsis;
+			overflow: hidden;
+			line-height: 16px;
+		}
+		.int{
+			background:linear-gradient(to right,#00d2ff,#928DAB);
+		}
+		.int1{
+			background:linear-gradient(to right,#4DA0B0,#D39D38);
+		}
+		.btn1{
+			margin-bottom: 2px;
+			bottom: 50px;
+			left: 120px;
+			position: absolute;
+
+		}
+		.boosh{
+			right:10px;
+			bottom:5px;
+			position:absolute;
+		}
+		.b1{
+			width:100px;
+
+		}
+		.nav1{
+			display:flex;
+			background:transparent;
+			height: 110px;
+
+		}
+		.a1 a{
+			text-decoration: none;
+			color:grey;
+			margin-left: 10px;
+		}
+		.a1{
+			padding-top: 15px;
+			height:50px;
+			margin-left: 20px;
+			width: 276px;
+			margin-top: 15px;
+		}
+
+
+		.log{
+			margin-left: 513px;
+		padding-top: 15px;
+		height: 50px;
+		margin-top: 15px;
+
+		}
+		.log a{
+			text-decoration: none;
+			color:grey;
+			padding-left: 20px;
+
+		}
+		#img2{
+			width: 168px;
+    height: 110px;
+		}
+		#jumb{
+			background:#e55f0b;
+			text-align: center;
+			color:white;
+			height:100px;
+			font-size: 38px;
+			font-weight: 600;
+			padding-top: 15px;
+		}
+
+	</style>
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+	<div class="nav1">
+
+		<div class="navtitle"><img id="img2" src="{% static 'images/logo1.png' %}" onclick="location.href='http://localhost:8000'"></div>
+
+	</div><div id="jumb">Grab one from here for your career</div>
+
+<div class='containe'>
+<div class='row maincon'>
+  {% for article in all_articles %}
+	<div style="position:relative;"class="col-med-4 subcon">
+		<center>
+			<img src={{article.image.url}}><div style="text-overflow: inherit;margin-top:5%;margin-bottom: 5%;">
+				<b>{{article.Title}}</b>
+			</div>
+			<div class="btn1">
+				<button class="b1 btn btn-danger">{{article.category}}</button>
+			</div>
+		</center>
+		<a href="http://localhost:8000/hard/{{article.id}}"><span class="boosh">Read more</span></a>
+	</div>
+{% endfor %}
+	</div>
+
+</div>
+<p></p>
+</body>
+<script>
+/*<script type="text/javascript">
+document.onload=function(){
+	var x=document.getElementsByClassName('btn');
+	for(var i=0;i<x.length;i++)
+	{
+	var v=x[i];
+	if(v.innerHTML=="Job"){
+		v.classList.add('int1');
+		v.classList.remove('int');}
+	if(v.innerHTML=="Internship"){
+		v.classList.add('int');
+		v.classList.remove('int1');
+	}
+
+
+}
+}*/
+</script>
+</html>
